@@ -1,6 +1,60 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <html>
-  <p>This my work.</p>
+<body>
+  <h1>SmartGit, GitHub和Angular的环境搭建</h1>
+  <ol>
+    <li>安装NODEJS</li>
+    <li>验证NODEJS是否安装成功</li>
+    <code><pre>npm -v</pre></code>
+    <li>安装angular脚手架</li>
+    <code><pre>npm install -g @angular/cli</pre></code>
+    <li>验证angular是否安装成功</li>
+    <code><pre>ng -v</pre></code>
+    <li>创建一个前台项目</li>
+    <ol>
+      <li>新建一个文件夹D:\basic-web</li>
+      <li>开始-》运行-》cmd</li>
+      <code><pre>
+        d:
+ 	cd basic-web
+      </pre></code>
+      <li>创建一个angular前台项目</li>
+      <code><pre>ng new basic-web </pre></code>
+      <li>安装所需的依赖插件</li>
+      <code><pre>ng install</pre></code>
+      <li>启动前台项目</li>
+      <code><pre>ng serve --open</pre></code>
+    </ol>
+    <li>建立git本地库 git-repo</li>
+    <ol>
+      <li>git创建账号</li>
+      <li>邮箱激活账户</li>
+      <li>创建私钥</li>
+      参照： <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">生成一个新的SSH KEY以及如何添加到SSH AGENT。</a>
+      <ul>
+          <li>生成一个新的SSH KEY</li>
+          <ol>
+            <li>打开终端。</li>
+            <li>粘贴下面的命令行，注意使用注册GitHub用的邮箱地址</li>            
+                <code><pre>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</pre></code><br/>
+                这样就会生成一个新SSH KEY，邮箱地址会被当成一个标签。并且显示下面的文字：<br/>             
+                <code><pre>Generating public/private rsa key pair.</pre></code>
+              
+            
+          </ol>
+      </ul>
+      
+      
+      <li>在github上填写公钥</li>
+      参照： <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">如何添加SSH KEY到GitHub帐户上</a>
+    </ol>
+  </ol>
+  
+</body>
+
+
 </html>
+
 
 
