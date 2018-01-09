@@ -50,9 +50,34 @@
       参照： <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">如何添加SSH KEY到GitHub帐户上</a>
     </ol>
   </ol>
-  
+  <h1>git</h1>
+  <ol>
+    <li>git是否存在远程url的验证方法</li>
+    git remote -v
+    <li>git建立远程url的方法</li>
+    git remote add origin  git@github.com:usernamexxxx/filexxxx.git
+  </ol>
+  <h1>Error解决</h1>
+  <ul>
+    <li>Port 4200 is already in use. Use '--port' to specify a different port</li>
+    解决方法：
+    <ul>
+      <li>Linux</li>
+      sudo kill $(sudo lsof -t -i:4200) <br/>
+      或者<br/>
+      sudo kill `sudo lsof -t -i:4200`
+      <li>Windows</li>
+      netstat -a -n -o <br/>
+      And then, find port with port number 4200 by right click on terminal and click find, enter 4200 in "find what" and click "find next": Let say you found that port number 4200 is used by pid 18932. Type below command in cmd:<br/>
+      找到端口4200对应的pid,杀掉这个pid.<br/>
+      taskkill -f /pid 18932
+      
+
+    </ul>
+  </ul>
 </body>
 
+122
 
 </html>
 
